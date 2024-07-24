@@ -27,29 +27,37 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 
-    // 스프링 코어 의존성 추가
+    // 스프링 코어 라이브러리 추가
     implementation group: 'org.springframework', name: 'spring-core', version: '5.3.19'
 
-    // 스프링 컨텍스트 의존성 추가
+    // 스프링 컨텍스트 라이브러리 추가
     implementation group: 'org.springframework', name: 'spring-context', version: '5.3.19'
 
-    // 스프링 테스트 의존성 추가
+    // 스프링 테스트 라이브러리 추가
     testImplementation group: 'org.springframework', name: 'spring-test', version: '5.3.19'
 
-    // 롬복 의존성 추가
+    // 스프링 웹mvc 라이브러리 추가
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.16'
+
+
+    // 롬복 라이브러리 추가
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
     testCompileOnly 'org.projectlombok:lombok:1.18.24'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-    // log4j2 의존성 추가
+    // log4j2 라이브러리 추가
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.2'
     implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.2'
     implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.17.2'
 
-    // jsp 사용을 위한 jstl 의존성 추가
+    // jsp 사용을 위한 jstl 라이브러리 추가
     implementation group: 'jstl', name: 'jstl', version: '1.2'
+
+    // mysql 드라이버와 hikariCP 라이브러리 추가
+    implementation 'mysql:mysql-connector-java:8.0.32'
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.1'
 
 }
 

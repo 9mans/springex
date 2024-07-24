@@ -3,4 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!-- <context-param>은 웹 애플리케이션에 전달할 초기화 매개변수를 정의한다 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/root-context.xml</param-value>
+    </context-param>
+
+    <!-- 이벤트 리스너 추가 리스너는 웹 애플리케이션이 실행되거나 종료될 때 특정한 작업을 처리하는 역할을 한다.-->
+    <!-- 이벤트 리스너는 특정한 작업에 대한 감시와 처리를 수행한다-->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 </web-app>
